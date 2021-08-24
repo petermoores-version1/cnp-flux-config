@@ -4,6 +4,7 @@ bases:
   - rpe
   - adoption
   - ccd
+  - cpo
   - dg
   - divorce
   - financial-remedy
@@ -19,7 +20,6 @@ bases:
   - rd
   - xui
   - fees-pay
-  - unspec
   - camunda
   - aac
   - fact
@@ -28,6 +28,7 @@ bases:
   - wa
   - am
   - sscs
+  - civil
 patches:
   - path: ../ithc-helmrelease.yaml
     target:

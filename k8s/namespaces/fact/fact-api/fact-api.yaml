@@ -12,9 +12,9 @@ spec:
     java:
       replicas: 2
       useInterpodAntiAffinity: true
-      image: hmctspublic.azurecr.io/fact/api:prod-cf63b848
+      image: hmctspublic.azurecr.io/fact/api:prod-e564968-20210819172557
       environment:
-        VAR_TA: trigger8
+        VAR_TA: trigger9
       keyVaults:
         fact:
           resourceGroup: fact

@@ -12,8 +12,10 @@ spec:
     java:
       useInterpodAntiAffinity: true
       replicas: 2
+      memoryRequests: "1024Mi"
       memoryLimits: "4096Mi"
+      cpuRequests: "1000m"
       cpuLimits: "2000m"
-      image: hmctspublic.azurecr.io/em/hrs-api:prod-b2abcb5a
+      image: hmctspublic.azurecr.io/em/hrs-api:prod-33c79b6-20210820090509
       environment:
-        TEST: "REFRESH"
+        TEST: "REFRESHJul14"

@@ -5,8 +5,8 @@ metadata:
   name: idam-api
   namespace: idam
   annotations:
-    flux.weave.works/automated: "true"
-    flux.weave.works/tag.java: glob:ithc-*
+    flux.weave.works/automated: "false"
+    flux.weave.works/tag.java: glob:prod-*
 spec:
   releaseName: idam-api
   rollback:
@@ -15,10 +15,10 @@ spec:
   chart:
     repository: https://hmctspublic.azurecr.io/helm/v1/repo/
     name: idam-api
-    version: 0.3.8
+    version: 0.3.9
   values:
     java:
-      image: hmctspublic.azurecr.io/idam/api:ithc-394cf46d
+      image: hmctspublic.azurecr.io/idam/api:prod-3805b26-20210818190558
       imagePullPolicy: Always
       ingressHost: idam-api.ithc.platform.hmcts.net
       replicas: 1
