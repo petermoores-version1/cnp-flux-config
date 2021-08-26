@@ -11,5 +11,5 @@ spec:
     java:
       image: hmctspublic.azurecr.io/ccpay/refunds-api:pr-34-87aeb71-20210825173044
       environment:
-        S2S_AUTHORISED_SERVICES: payment_app,ccpay_bubble,cmc,api_gw,ccd_gw
+        S2S_AUTHORISED_SERVICES: payment_app,ccpay_paybubble,cmc,api_gw,ccd_gw
         DUMMY_VARIABLE: true
