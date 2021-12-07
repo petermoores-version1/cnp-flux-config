@@ -1,10 +1,10 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: dead-letter-queue-process
+  name: refund-approved-update-process
   namespace: fees-pay
 spec:
-  releaseName: dead-letter-queue-process
+  releaseName: refund-approved-update-process
   rollback:
     enable: true
     retry: true
@@ -14,10 +14,10 @@ spec:
     version: 0.0.11
   values:
     job:
-      image: "hmctspublic.azurecr.io/payment/jobs:pr-30-65581b2-20211117164106"   #{"$imagepolicy": "flux-system:dead-letter-queue-process"}
-      schedule: "0 0 * * *"
+      image: "hmctspublic.azurecr.io/payment/jobs:pr-30-65581b2-20211117164106"   #{"$imagepolicy": "flux-system:refund-approved-update-process"}
+      schedule: "*/30 * * * *"
       environment:
-        REPORT_NAME: dead-letter-queue-process
+        REPORT_NAME: refund-approved-update-process
         DUMMY_RESTART_VAR: false
     global:
       environment: demo
